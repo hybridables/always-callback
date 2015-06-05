@@ -10,8 +10,8 @@
     "test": "standard && node test.js"
   },
   "dependencies": {
-    "is-async-function": "^1.0.0",
-    "make-callback": "^1.0.0"
+    "is-async-function": "~1.0.0",
+    "make-callback": "~1.0.0"
   },
   "devDependencies": {
     "assertit": "^0.1.0"
