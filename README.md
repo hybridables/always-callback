@@ -66,6 +66,18 @@ statFile('./package.json', function (err, res) {
 ```
 
 
+## Related
+- [make-callback](https://github.com/tunnckocore/make-callback): Make synchronous function to support callback api
+- [handle-callback](https://github.com/hybridables/handle-callback): Initial step for creating hybrid APIs, used by `hybridify`. Handle callback in promise - give promise and callback return promise.
+- [handle-arguments](https://github.com/hybridables/handle-arguments): Handles given Arguments object - return separatly last argument (commonly callback) and other arguments as Array. Useful in node-style callback flow.
+- [manage-arguments](https://github.com/tunnckocore/manage-arguments): Prevents arguments leakage - managing arguments. From Optimization killers by Petka Antonov.
+- [is-async-function](https://github.com/tunnckocore/is-async-function): Check that given function is async (callback) function or not. Trying to guess that based on check if `callback` or `cb` exists in function arguments.
+- [is-sync-function](https://github.com/tunnckocore/is-sync-function): Opposite of `is-async-function`. Check that given function is synchronous.
+- [is-empty-function](https://github.com/tunnckoCore/is-empty-function): Checks the given function (or fn.toString()) is with empty body - dont have body.
+
+
+
+
 ## Contributing
 
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/always-callback/issues/new).  
