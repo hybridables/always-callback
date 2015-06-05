@@ -28,13 +28,17 @@ var alwaysCallback = require('always-callback')
 
 // if sync function given, transform it to async
 var parse = alwaysCallback(JSON.parse)
+var stringify = alwaysCallback(JSON.stringify)
+var readFile = alwaysCallback(fs.readFileSync)
+
+// if asynchronous function given, it remains async
+var statFile = alwaysCallback(fs.stat)
+
 parse('{"foo":"bar"}', function (err, res) {
   console.log(err) //=> null
   console.log(res) //=> { foo: 'bar' }
 })
 
-// if sync function given, transform it to async
-var stringify = alwaysCallback(JSON.stringify)
 stringify({foo: 'bar', baz: 'qux'}, null, 2, function (err, res) {
   //=> it would prettify and stringify json
   console.log(err) //=> null
@@ -45,23 +49,14 @@ stringify({foo: 'bar', baz: 'qux'}, null, 2, function (err, res) {
   // }
 })
 
-// if SYNC function given, transform it to async
-var readFile = alwaysCallback(fs.readFileSync)
 readFile('./package.json', 'utf8', function (err, res) {
   console.log(err) //=> null
   console.log(res) //=> { name: 'always-callback', ... }
 })
 
-// if ASYNC function given, it remains async
-var statFile = alwaysCallback(fs.stat)
 statFile('./package.json', function (err, res) {
   console.log(err) //=> null
-  console.log(res) 
-  //=> {
-  //  dev: 64770,
-  //  mode: 33204,
-  //  nlink: 1,
-  //  uid: 500, ... }
+  console.log(res) //=> { dev: 64770, mode: 33204, ... }
 })
 ```
 
