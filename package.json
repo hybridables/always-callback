@@ -1,0 +1,20 @@
+{
+  "name": "always-callback",
+  "version": "0.0.0",
+  "description": "Create callback api for given sync function. Guarantee that given function (sync or async, no matter) will always have callback api and will handle errors correctly.",
+  "repository": "tunnckoCore/always-callback",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "dependencies": {
+    "is-async-function": "^1.0.0",
+    "make-callback": "^1.0.0"
+  },
+  "devDependencies": {
+    "assertit": "^0.1.0"
+  },
+  "keywords": []
+}
