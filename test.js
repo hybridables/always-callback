@@ -68,9 +68,11 @@ test('always-callback:', function () {
       test.ifError(!err)
       test.ok(err)
       test.equal(err.code, 'ENOENT')
-      test.equal(err.syscall, 'open')
       test.equal(err.path, './pacfsdfsdfdfkage.json')
       test.equal(res, undefined)
+      if (err.syscall) {
+        test.equal(err.syscall, 'open')
+      }
       done()
     })
   })
@@ -90,9 +92,11 @@ test('always-callback:', function () {
       test.ifError(!err)
       test.ok(err)
       test.equal(err.code, 'ENOENT')
-      // test.equal(err.syscall, 'stat') fails on node 1.0 and below
       test.equal(err.path, './packasdfsdfge.json')
       test.equal(res, undefined)
+      if (err.syscall) {
+        test.equal(err.syscall, 'stat')
+      }
       done()
     })
   })
@@ -112,9 +116,11 @@ test('always-callback:', function () {
       test.ifError(!err)
       test.ok(err)
       test.equal(err.code, 'ENOENT')
-      // test.equal(err.syscall, 'open') fails on node 1.0 and below
       test.equal(err.path, './package1235678.json')
       test.equal(res, undefined)
+      if (err.syscall) {
+        test.equal(err.syscall, 'open')
+      }
       done()
     })
   })
