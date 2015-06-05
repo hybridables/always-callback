@@ -16,5 +16,23 @@
   "devDependencies": {
     "assertit": "^0.1.0"
   },
-  "keywords": []
+  "keywords": [
+    "always",
+    "api",
+    "async",
+    "asynchronous",
+    "callback",
+    "cb",
+    "correct",
+    "create",
+    "fn",
+    "function",
+    "guarantee",
+    "handle",
+    "make",
+    "preserve",
+    "sync",
+    "synchrone",
+    "util"
+  ]
 }
