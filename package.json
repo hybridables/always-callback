@@ -1,6 +1,6 @@
 {
   "name": "always-callback",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Create callback api for given sync function. Guarantee that given function (sync or async, no matter) will always have callback api and will handle errors correctly.",
   "repository": "tunnckoCore/always-callback",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
